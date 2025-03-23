@@ -1,4 +1,18 @@
 @import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrolling */
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-color-perfil);
+    background-image: url(../public/Logo.png);
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: center; /* Center the image */
+    background-size: auto; /* Ensures the full image is visible */
+}
 
 :root {
     --blue-perfil: #007091;
@@ -8,13 +22,7 @@
 
 .p-menubar, .p-menubar-mobile, .p-menubar-mobile .p-menubar-root-list{
     background-color: var(--blue-perfil)!important;
+    border-radius: 0px!important;
+    border: none!important;
     // color: white!important;
-}
-
-.layout{
-    width: 100vw;
-    height: 100vh;
-    // background-color: var(--bg-color-perfil);
-    box-sizing: border-box;
-    // overflow: hidden;
 }
