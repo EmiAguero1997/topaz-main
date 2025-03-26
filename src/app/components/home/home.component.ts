@@ -15,6 +15,7 @@ export class HomeComponent {
     this.ar.queryParams.subscribe(params=>{
       this.token = params['token'];
       let identity = params['identity'];
+      identity = atob(identity);
       this.identity = JSON.parse(identity);
       sessionStorage.setItem('token', this.token);
       sessionStorage.setItem('identity', this.identity);
