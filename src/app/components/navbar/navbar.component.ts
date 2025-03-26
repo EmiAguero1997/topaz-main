@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, computed, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { Menubar } from 'primeng/menubar';
 import { BadgeModule } from 'primeng/badge';
@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { Ripple } from 'primeng/ripple';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import {ButtonModule} from 'primeng/button';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -19,6 +20,11 @@ export class NavbarComponent implements OnInit {
   items: MenuItem[] | undefined;
     userItems: MenuItem[] | undefined;
     toggle:boolean = false;
+    identity:any = computed(()=> this.authSv.identity());
+
+    constructor(private authSv:AuthService){
+
+    }
   
     ngOnInit() {
         this.items = [
