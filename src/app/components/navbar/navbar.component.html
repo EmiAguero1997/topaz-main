@@ -12,7 +12,7 @@
     <ng-template #end>
         <div class="flex items-center gap-2">
           <p-button [rounded]="true" (onClick)="toggleUserMenu()">
-            <p-avatar image="user.svg" shape="circle" />
+            <p-avatar [image]="identity().picture" shape="circle" />
           </p-button>
             
         </div>
