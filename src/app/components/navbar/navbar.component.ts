@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit {
     }
   
     ngOnInit() {
-      console.log(this.identity);
+      console.log(this.identity());
         this.items = [
             {
                 label: 'Areas',
